@@ -13,17 +13,7 @@ Random rand = new Random();
 
 RandonArr(arr);
 PrintArr(arr);
-
-if (m < arr.GetLength(0) && n < arr.GetLength(1))
-{
-    Console.WriteLine(arr[m, n]);
-}
-else
-{
-    Console.WriteLine("Такого элемента в данном массиве нет");
-}
-
-
+Find(arr, m, n);
 
 int InputNumber(string text)
 {
@@ -55,3 +45,14 @@ void PrintArr(int[,] array)
     }
 }
 
+void Find(int[,] array, int m, int n)
+{
+    if (m < array.GetLength(0) && n < array.GetLength(1))
+    {
+        Console.WriteLine(array[m, n]);
+    }
+    else
+    {
+        Console.WriteLine("Такого элемента в данном массиве нет");
+    }
+}
